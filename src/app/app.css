@@ -1,0 +1,7 @@
+/*nav[mat-tab-nav-bar] {*/
+/*    background-color: #f5f5f5;*/
+/*}*/
+
+.mat-mdc-tab-link {
+    min-width: 120px;
+}

@@ -1,12 +1,21 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterOutlet, RouterLink, RouterLinkActive} from '@angular/router';
+import {MatTabsModule} from '@angular/material/tabs';
+import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, MatTabsModule, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('solana_project1_ui1');
+
+  protected readonly title = signal('Solana Project 1');
+
+    activeLink = 'home';
+    links = [
+        { path: '/home', label: 'Home' },
+        { path: '/about', label: 'About' }
+    ];
 }
